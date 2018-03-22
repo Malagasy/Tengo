@@ -1,0 +1,11 @@
+.simple-scrollbox--scroll{
+	>div{
+		background-color: lightgray;
+		opacity: .9;
+		border-radius: 15px;
+		width: 10px;
+		&:hover{
+			opacity:1;
+		}
+	}
+}

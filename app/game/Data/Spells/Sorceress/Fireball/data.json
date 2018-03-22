@@ -1,0 +1,10 @@
+{
+	"duration": 3000,
+	"velocity": 1000,
+	"name": "Fireball",
+	"sprite": null,
+	"damage": 100,
+	"numberOfSprites": 1,
+	"cooldown": null,
+	"cross": false
+}

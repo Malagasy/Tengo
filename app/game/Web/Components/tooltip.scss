@@ -1,0 +1,12 @@
+.tooltip__container{
+	padding:1px 0 1px 6px;
+	font-size: .9em;
+	margin-bottom: .5em;
+	li{
+		transition: color .5s;
+		&:hover{
+			cursor: pointer;
+			color: #d3d3d3;
+		}
+	}
+}

@@ -1,0 +1,312 @@
+
+$darkRed: #b52e31;
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+	display:block;
+	padding:0;
+	margin:0;
+	min-height: 100%;
+	
+}
+*:focus {
+    outline: none;
+}
+
+.in__game{
+	position:relative;
+	display:none;
+	&.active{
+		display: inline-block;
+	}
+}
+
+.message__list{
+	position:absolute;
+	top:60px;
+	left:10px;
+	width:100%;
+	height:auto;
+	.inner__message{
+		display:inline-block;
+		padding:5px;
+		color: #fff;
+		background-color:rgba(88,10,86,.5);
+		span{
+			color: #bf642f;
+		}
+	}
+}
+
+.message__input{
+	position:absolute;
+	bottom:60px;
+	left:20%;
+	right:20%;
+	display:none;
+	input{
+		width:100%;
+		display:block;
+		background-color:rgba(88,10,86,.4);
+		padding:10px;
+		color:white;
+		border:none;
+	}
+}
+
+#interface{
+	position:absolute;
+	
+}
+
+.interface_allies{
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.ally{
+	display:inline-block;
+	width: 70px;
+	opacity:.55;
+	margin-right:10px;
+	vertical-align: top;
+	.lifebox{
+		width: 100%;
+		background-color: black;
+		position:relative;
+		.lifecurrent{
+			display:block;
+			width: 50%;
+			background-color: green;
+			height:13px;
+		}
+		.allyname{
+			position:absolute;
+			top:1.5px;
+			font-size:.7em;
+			color: white;
+			left:50%;
+			transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+		}
+	}
+}
+#enemy_bar{
+
+	display:none;
+	position: absolute;
+	top:20px;
+	left: 50%;
+	transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+
+}
+
+#player_bar{
+
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    &:hover{
+    	.bar_life_text{
+    		display: block;
+    	}
+    }
+
+}
+
+.bar_life_text{
+	display: none;
+  position: absolute;
+  top: -22px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: .75em;
+  letter-spacing: 2px;
+  opacity: .7;
+}
+
+.bar_life_player{
+	position:relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+
+
+  .bar_life{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    bottom: 0;
+    background: radial-gradient(circle at 60px 30px, white 0%, #a20808 5%, #a20808 40%, #000 100%);
+  	transition: bottom .3s ease-out;
+  }
+}
+
+.bar_life_enemy{
+	opacity: .7;
+	width: 200px;
+	background-color: black;
+	.bar_life{
+		display: block;
+		width: 100%;
+		background-color: red;
+		height: 20px;
+	}
+	span{
+		position: absolute;
+		left: 50%;
+		top: 2px;
+		transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		color: white;
+
+	}
+}
+
+#minimap{
+	position:absolute;
+	right:10px;
+	top: 10px;
+	width: 250px;
+	height: 200px;
+	background-color: black;
+	opacity: .5;
+	span{
+		display:block;
+		height: 15px;
+		position: absolute;
+		width: 5px;
+		opacity: .7;
+		transform-origin: center center;
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		&:after {
+			content: "";
+			height: 5px;
+			left: -5px;
+			position: absolute;
+			top: 5px;
+			width: 15px;
+		}
+
+		&.player{
+			opacity: .4;
+			background-color: white;
+		}
+		&.player:after{
+			background-color: white;
+		}
+		&.enemy{
+			background-color: red;
+		}
+		&.enemy:after{
+			background-color: red;
+		}
+		&.ally{
+			background-color: green;
+		}
+		&.ally:after{
+			background-color: green;
+		}
+	}
+}
+
+#statistic{
+	
+	display: none;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+
+}
+
+#performance{
+	position: absolute;
+	z-index:11;
+	top:2;
+	left: 2;
+	.performance__fps{
+		color:red;
+		font-size: 1.2em;
+	}
+}
+
+#spells{
+	position: absolute;
+	bottom: 10px;
+	left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+	.spell__item{
+		width: 30px;
+		height: 30px;
+		background-color: orange;
+		margin:3px;
+		&.active{
+			background-color: red;
+		}
+	}
+}
+
+#round_info{
+	.round__info__background{
+		position:absolute;
+		top: 0;
+		right: 100%;
+		bottom: 100%;
+		left: 0;
+		opacity: 0;
+		background: #000;
+		transition: opacity 1s;
+		z-index:20;
+		&.active{
+			right:0;
+			bottom: 0;
+			opacity: 1;
+		}
+	}
+	.round__info__text{
+		display:none;
+		position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Permanent Marker";
+    color: $darkRed;
+    text-align:center;
+    font-size: 2.5em;
+    z-index:21;
+    small{
+    	display:block;
+    	font-size: .7em;
+    }
+    &.active{
+    	display: block;
+    }
+	}
+		
+}

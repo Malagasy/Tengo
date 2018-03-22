@@ -1,0 +1,9 @@
+{
+	"duration": 10000,
+	"velocity": 0,
+	"name": "Barrier",
+	"sprite": null,
+	"damage": 1,
+	"numberOfSprites": 1,
+	"cooldown": 10000
+}

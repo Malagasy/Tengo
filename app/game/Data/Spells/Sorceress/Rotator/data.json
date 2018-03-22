@@ -1,0 +1,9 @@
+{
+	"duration": 10000,
+	"velocity": 1000,
+	"name": "Rotator",
+	"sprite": null,
+	"damage": 1,
+	"numberOfSprites": 1,
+	"cooldown": 5000
+}

@@ -1,0 +1,9 @@
+{
+	"duration": 3000,
+	"velocity": 3000,
+	"name": "MultipleFireball",
+	"sprite": null,
+	"damage": 100,
+	"numberOfSprites": 5,
+	"cooldown": null
+}
