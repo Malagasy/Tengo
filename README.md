@@ -6,3 +6,4 @@
 THe game was made using PhaserJS, Socket.io et Express.
 
 ## Example
+<img src="https://github.com/Malagasy/Tengo/blob/master/app/assets/gifs/demo-game.gif?raw=true" width="480">
