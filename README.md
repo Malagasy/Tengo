@@ -2,7 +2,7 @@
 	Real time player vs player game
 </h1>
 
-## Notes
+## Note
 The game was made using PhaserJS, Socket.io et Express.
 
 ## Example
