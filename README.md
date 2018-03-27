@@ -1,5 +1,5 @@
 <h1 align="center">
-	Real time player vs player game
+	Real-time game - Player vs Player
 </h1>
 
 ## Note
